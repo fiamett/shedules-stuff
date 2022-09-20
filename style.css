@@ -13,6 +13,35 @@ textarea{
   padding: 10px;
 }
 
+
+
+
+li {
+  background-color: #06AED5;
+  display: flex;
+  justify-content:space-between;
+  height: 80px;
+}
+
+input {
+  width:80vw;
+  background-color: #ff6961;
+}
+li p {
+  min-width: 5%;
+  text-align: center;
+  font-size: large;
+  align-self: center;
+}
+li button {
+  min-width: 5%;
+  text-align: left;
+}
+
+
+
+
+
 .jumbotron {
   text-align: center;
   background-color: transparent;
