@@ -6,11 +6,9 @@ to help you attach a task to a time
 
 
 ## Usage
-this website is seaperated into 24 sections and lets you add text to all of them 
 
-there is a clock on the top of the page so you can keep better trrack of when stuff is
-there is also a system in place so that tasks that have passed turn red and asks that are current turn green
+type in the tasks into the corresponding hour and press the save button when the time comes around the tasks color will turn green and when it has passed it will turn red you can chack the top of the page to check what time it is
 
- ![starting screen](./chall4.PNG)
+ ![header](./header.PNG)
     
- ![in game](./challange4.PNG)
+ ![colors](./colorChange.PNG)
