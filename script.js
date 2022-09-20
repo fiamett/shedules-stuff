@@ -51,3 +51,5 @@ function saveTask() {
 
 containerEl.on('click', '.save', saveTask);
 done();
+
+console.log("test");
