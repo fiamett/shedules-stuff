@@ -1,8 +1,11 @@
 var containerEl = $('#container')
 var date = $('#currentDay')
 
-var tasks =[,,,,,,,,,,,,,,,,,,,,,,,,]
-tasks = jQuery.parseJSON(localStorage.strung)
+var tasks =["","","","","","","","","","","","","","","","","","","","","","","","",""]
+if (JSON.parse(window.localStorage.getItem("strung")) !== null) {
+tasks = JSON.parse(window.localStorage.getItem("strung"))
+}
+//checks if there is already a local storage file and if there isn't goes to the default
 
 setInterval(function(){
 date.html("it its currently " + "<br></br>" + moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
@@ -31,7 +34,8 @@ for (var i=1;i<=24;i++){
     containerEl.children().last().append("<p>"+trans+"</p>");
     containerEl.children().last().append('<input type="text" id="task"></input>');
     containerEl.children().last().append('<button class=save>save</button>');
-    //creates a list for everyhour of the day and adds an input, button, and time indicator per list item 
+    //creates a list for every hour of the day and adds an input, button, and time indicator per list item 
+
     containerEl.children().last().children('input').val(tasks[(i-1)])
     //fills the list from the local storage array
 
@@ -43,11 +47,12 @@ function saveTask() {
     tasks.splice(($(this).parent().attr('id') -1),1,$(this).siblings('input').val())
     //every time the save button is clicked it takes the value of the attached textbox and saves it to the corresponding part of the array
 
-    var strung = JSON.stringify(tasks)
-    localStorage.strung = strung;
+    window.localStorage.setItem("strung", JSON.stringify(tasks));
     //turns the task string to a json then saves it to local storage
 
   }
 
 containerEl.on('click', '.save', saveTask);
+//button listener
 done();
+// sets the colors early
